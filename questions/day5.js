@@ -33,7 +33,7 @@ function shiftString(str) {
     let s =str
     for (let i = 0; i < str.length-1; i++) {
         s =s.slice(1)+s[0]
-        console.log(s);
+        console.log(s); 
          
     }
 //    c(or s.slice(1)) → removes the first character.
