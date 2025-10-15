@@ -10,11 +10,13 @@
 | **8** | Mock Tests + JS logic    | Mix DSA + JS questions                | Interview ready          |
 _____________________________________________________________________________________________________________
 
+💡 Smart Practice Strategy
 | Task              |Tool             |
 | ----------------- | --------------- | 
 | Problem practice  | 2 questions/day |
 | Logic building    | 3 per week      |
 | Mock interviews   | Weekly          |
+_____________________________________________________________________________________________________________
 
 ⚡ Quick Tip for Frontend Devs
 | Concept                  | DSA Mapping                             |
