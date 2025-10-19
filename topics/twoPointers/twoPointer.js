@@ -14,3 +14,33 @@ Move at different speeds (fast/slow)
 | Move elements              | Move zeros, partition array, Dutch flag |
 | Linked list cycles         | Detect cycle using slow/fast pointers   |
 */
+// function reserveString(str) {
+//   let left = 0,
+//     right = str.length - 1;
+//   for (let i = 0; i < array.length; i++) {
+//     const letter = array[i];
+    
+//   }
+//   return str;
+// }
+// console.log(reserveString("sajid"));
+
+// | Find if two numbers add up to a target
+function twoSum(nums, target) {
+  let left = 0,
+    right = left + 1;
+  let sum = 0;
+  for (let i = 0; i < nums.length-1; i++) {
+    sum = nums[left] + nums[right];
+    if (sum == target) {
+        return [left,right]
+    }
+    console.log(sum);
+    
+    right++
+  }
+  return [-1];
+}
+console.log(twoSum([2, 7, 11, 15], 26));
+
+  
