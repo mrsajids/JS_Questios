@@ -14,33 +14,76 @@ Move at different speeds (fast/slow)
 | Move elements              | Move zeros, partition array, Dutch flag |
 | Linked list cycles         | Detect cycle using slow/fast pointers   |
 */
-// function reserveString(str) {
-//   let left = 0,
-//     right = str.length - 1;
-//   for (let i = 0; i < array.length; i++) {
-//     const letter = array[i];
-    
-//   }
-//   return str;
-// }
-// console.log(reserveString("sajid"));
+function reserveString(str) {
+  let s = str.split('');
+  let left = 0,
+    right = s.length - 1;
+
+    while (left<right) {
+    [s[left], s[right]] = [s[right], s[left]];
+      left++;
+      right--;
+    }
+
+  return s.join('');
+}
+console.log(reserveString("sajid"));
 
 // | Find if two numbers add up to a target
-function twoSum(nums, target) {
-  let left = 0,
-    right = left + 1;
-  let sum = 0;
-  for (let i = 0; i < nums.length-1; i++) {
-    sum = nums[left] + nums[right];
-    if (sum == target) {
-        return [left,right]
-    }
-    console.log(sum);
+// function twoSum(nums, target) {
+//   let left=0, right = nums.length-1;
+//   for (let i = 0; i < nums.length; i++) {
+//     const sum = nums[left]+nums[right]
+//     console.log(sum);
     
-    right++
-  }
-  return [-1];
-}
-console.log(twoSum([2, 7, 11, 15], 26));
+//     if(sum<target)
+//       left++;
+//     else if(sum>target)
+//       right--;
+//     else 
+//       return [left,right]
+    
+//   }
+//   return [0]
+// }
+// console.log(twoSum([2,3,4], 6));
+
+// | Find if two numbers add up to a target(by brute force)
+// function twoSumUnsorted(nums, target) {
+//   for (let i = 0; i < nums.length; i++) {
+//     for (let j = i+1; j < nums.length; j++) {
+//           const sum = nums[i]+nums[j]
+//           if(sum==target)
+//          return [i,j]
+//     }
+    
+//   }
+// }
+// console.log(twoSumUnsorted([2,3,4], 6));
+// | Find if two numbers add up to a target(by hasing)
+// function twoSumUnsorted(nums, target) {
+//   const map = new Map();
+//   for (let i = 0; i < nums.length; i++) {
+//     const complement = target - nums[i];
+//     if(map.has(complement)){
+//       return [map.get(complement),i]
+//     }
+//     map.set(nums[i],i)
+//   }
+ 
+// }
+// console.log(twoSumUnsorted([2,1,5,4], 6));
+
+// function removeDuplicates(nums) {
+//   let left = 0,
+//     right = left + 1;
+//   for (let i = 0; i < nums.length; i++) {
+//     if (nums[left] == nums[right]) nums.shift();
+//     console.log(nums);
+//   }
+//   return nums;
+// }
+// console.log(removeDuplicates([1,1,4,5,5,6]));
+
 
   

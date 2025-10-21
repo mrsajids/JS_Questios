@@ -50,6 +50,9 @@
 - Two Sum
 - Group Anagrams
 - First Non-Repeating Character
+-Find Duplicates in an Array
+-Character Frequency Counter
+-Longest Substring Without Repeating Characters
 - Subarray Sum Equals K
 - Longest Consecutive Sequence
 
