@@ -85,5 +85,15 @@ console.log(reserveString("sajid"));
 // }
 // console.log(removeDuplicates([1,1,4,5,5,6]));
 
+function removeNonAlphanumeric(inputString) {
+  return inputString.replace(/[^a-zA-Z]/g, "");
+}
+function validPalindrom(s) {
+  let originalString = removeNonAlphanumeric(s).toLowerCase();
+  let reversedString = removeNonAlphanumeric(s).toLowerCase().split('').reverse().join('');
+  return originalString===reversedString;
+}                                                                                                                                                                                               
+console.log(validPalindrom("A man, a plan, a canal: Panama"));
+
 
   

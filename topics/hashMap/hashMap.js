@@ -92,3 +92,60 @@ In JavaScript, a HashMap-like data structure is typically implemented using eith
 
 // console.log(groupAnagram(["eat", "tea", "tan", "ate", "nat", "bat"]));
 
+
+// function counterLetters(words) {
+//   let obj = {};
+//   for (const letter of words) {
+//     if (obj[letter]) {
+//       obj[letter] = obj[letter] + 1;
+//     } else {
+//       obj[letter] = 1;
+//     }
+//   }
+//   return obj;
+// }
+
+// console.log(counterLetters("sajeed"));
+
+// 4. Word Pattern
+// Input: pattern = "abba", s = "dog cat cat dog"
+// Output: true
+
+// Explanation:
+// The bijection can be established as:
+// 'a' maps to "dog".
+// 'b' maps to "cat".
+
+function counterLetters(pattern, s) {
+  let obj = Object.create(null); // letter -> word
+  let reverseObj=Object.create(null); // word -> letter
+
+  const words = s.split(" ");
+  if (pattern.length !== words.length) return false;
+
+  for (let i = 0; i < pattern.length; i++) {
+
+      const letter = pattern[i];
+      const word = words[i];
+
+    // letter -> word
+    if (!obj[letter]) {
+      obj[letter] = words[i];
+    } else if (obj[letter] !== words[i]) {
+      return false;
+    } 
+
+    // word -> letter
+    if (!reverseObj[word]) {
+      reverseObj[word] = letter;
+    } else if (reverseObj[word] !== letter) {
+      return false;
+    } 
+
+  }
+  
+  return true;
+}
+
+console.log(counterLetters("abba","dog constructor constructor dog"));
+
