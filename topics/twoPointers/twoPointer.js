@@ -85,8 +85,12 @@ console.log(reserveString("sajid"));
 // }
 // console.log(removeDuplicates([1,1,4,5,5,6]));
 
+// Valid Paralindrom
+// Input: s = "A man, a plan, a canal: Panama"
+// Output: true
+// Explanation: "amanaplanacanalpanama" is a palindrome.
 function removeNonAlphanumeric(inputString) {
-  return inputString.replace(/[^a-zA-Z]/g, "");
+  return inputString.replace(/[^a-zA-Z0-9]/g, "");
 }
 function validPalindrom(s) {
   let originalString = removeNonAlphanumeric(s).toLowerCase();
