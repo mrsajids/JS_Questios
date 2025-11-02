@@ -18,12 +18,37 @@
 
 // console.log(mergeAlternately("ab", "pqrs"));
 
-const removeMultiSpaces = (word) => {
-  let s = "";
-//   for (let i = 0; i < word.length; i++) {
+// const removeMultiSpaces = (word) => {
+//   let s = "";
+// //   for (let i = 0; i < word.length; i++) {
    
-//   }
-  return word.replace(/\s+/g,' ');
+// //   }
+//   return word.replace(/\s+/g,' ');
+// };
+
+// console.log(removeMultiSpaces("  my  is    "));
+
+
+// Input: haystack = "sadbutsad", needle = "sad"
+// Output: 0
+// Explanation: "sad" occurs at index 0 and 6.
+// The first occurrence is at index 0, so we return 0.
+const findFirstOccorance = (haystack, needle) => {
+  let start = 0,
+    end = needle.length - 1;
+  let foundWordIndex = [];
+  for (let i = 0; i < haystack.length; i++) {
+    // console.log(haystack.substring(start, end + 1));
+    if (haystack.substring(start, end + 1) === needle) {
+      foundWordIndex.push(start);
+    }
+    start++;
+    end++;
+  }
+  return foundWordIndex.length > 0 ? foundWordIndex[0] : -1;
 };
 
-console.log(removeMultiSpaces("  my  is    "));
+console.log(findFirstOccorance("sadbutsad","sad"));
+
+
+
