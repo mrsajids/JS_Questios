@@ -34,6 +34,10 @@
 // Explanation: "sad" occurs at index 0 and 6.
 // The first occurrence is at index 0, so we return 0.
 const findFirstOccorance = (haystack, needle) => {
+  // optimized solutin
+//  return haystack.indexOf(needle);
+ 
+  //manual solution
   let start = 0,
     end = needle.length - 1;
   let foundWordIndex = [];
