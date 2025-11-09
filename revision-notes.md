@@ -10,6 +10,7 @@
 7. [Regular Expressions](#regular-expressions)
 8. [Common Algorithms](#common-algorithms)
 
+
 ---
 
 ## Array Methods & Manipulation
@@ -23,43 +24,6 @@
 - **every()**: Checks if all elements pass test
 - **some()**: Checks if any element passes test
 
-### Common Operations
-
-**Find user by property:**
-```javascript
-users.find(user => user.username === "carol")
-```
-
-**Filter by condition:**
-```javascript
-users.filter(user => user.age >= 25)
-```
-
-**Sort array:**
-```javascript
-users.sort((a, b) => a.age - b.age)  // ascending
-```
-
-**Map to extract property:**
-```javascript
-users.map(user => user.username)
-```
-
-**Reduce to sum:**
-```javascript
-users.reduce((acc, obj) => acc + obj.age, 0)
-```
-
-**Group by property:**
-```javascript
-// Group users by age
-const grouped = {};
-users.forEach(user => {
-  if (!grouped[user.age]) grouped[user.age] = [];
-  grouped[user.age].push(user);
-});
-```
-
 **Array Manipulation:**
 - `shift()`: Remove first element
 - `unshift()`: Add element at beginning
@@ -71,9 +35,18 @@ users.forEach(user => {
 ---
 
 ## String Manipulation
+## Quesions
+1. [Reversing a string](#reversing-a-string)
+2. Reverse Words in Sentence
+3. Check Palindrome
+4. Count Character Frequencies:
+5. Shift String Characters
+6. Merge Strings Alternately
+7. Remove Multiple Spaces
+8. Find First Occurrence (Needle in Haystack)
 
 ### Basic Operations
-
+### Reversing a string
 **Reverse String:**
 ```javascript
 // Method 1: Built-in
@@ -175,6 +148,12 @@ function findFirstOccurrence(haystack, needle) {
 - Tracking seen elements
 - Two Sum problems
 - Grouping/Anagram problems
+
+## Questions 
+1. Two Sum (HashMap):
+2. Count Letter Frequencies:
+3. Group Anagrams:
+4. Word Pattern:
 
 ### Map vs Object
 
@@ -285,6 +264,12 @@ function wordPattern(pattern, s) {
 - Reversing arrays/strings
 - Moving elements (zeros, partitioning)
 - Fast/slow pointer (linked lists, cycles)
+
+## Questions
+1. Reversing a string
+2. Two Sum (Sorted Array)
+3. Remove duplicates
+4. Valid Palindrome
 
 ### Patterns
 
