@@ -143,23 +143,70 @@ Explanation: The smallest subarray with sum ≥ 7 is [5, 2].
     Output: 12.75000
     Explanation: Maximum average is (12 - 5 - 6 + 50) / 4 = 51 / 4 = 12.75
 */
-function maxAvgSumArray(nums, k) {
-  let left = 0,
-    window_sum = 0,
-    max = 0;
+// function maxAvgSumArray(nums, k) {
+//   let left = 0,
+//     window_sum = 0,
+//     max = 0;
 
-  for (let right = 0; right < nums.length; right++) {
-    window_sum += nums[right];
+//   for (let right = 0; right < nums.length; right++) {
+//     window_sum += nums[right];
 
-    if(right-left+1==k) {
-      max = Math.max(max,window_sum/k);
-     console.log( nums.slice(left,right+1))
+//     if(right-left+1==k) {
+//       max = Math.max(max,window_sum/k);
+//      console.log( nums.slice(left,right+1))
 
-     window_sum -= nums[left];
+//      window_sum -= nums[left];
 
-      left++;
-    }
+//       left++;
+//     }
+//   }
+//   return max
+// }
+// console.log(maxAvgSumArray([1,12,-5,-6,50,3],4));
+
+/*
+  Longest Substring Without Repeating Characters
+  Input: s = "abcabcbb"
+  Output: 3
+  Explanation: The answer is "abc", with the length of 3. Note that "bca" and "cab" are also correct answers.
+  Example 2:
+
+  Input: s = "bbbbb"
+  Output: 1
+  Explanation: The answer is "b", with the length of 1.
+  
+*/
+
+// function longestSubStringWithoutRepeatChar(s) {
+//   const str = s.split("");
+//   let map = new Map();
+//   let long = 0;
+
+//   for (let right = 0; right < str.length; right++) {
+//     if (map.get(str[right])) {
+//       long = Math.max(long, map.size);
+//       // map.clear();
+
+//       map.set(str[right], str[right]);
+//     } else {
+//       map.set(str[right], str[right]);
+//     }
+//   }
+
+//   return long;
+// }
+// console.log(longestSubStringWithoutRepeatChar("abcabc"));
+
+
+function longestSubStringWithoutRepeatChar(s) {
+  const map = new Map()
+  let left=0;
+  let long = 0;
+
+  for (let right = 0; right < str.length; right++) {
+   
   }
-  return max
+
+  return long;
 }
-console.log(maxAvgSumArray([1,12,-5,-6,50,3],4));
+console.log(longestSubStringWithoutRepeatChar("abcabcbb"));
