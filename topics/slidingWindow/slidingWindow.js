@@ -199,14 +199,25 @@ Explanation: The smallest subarray with sum ≥ 7 is [5, 2].
 
 
 function longestSubStringWithoutRepeatChar(s) {
-  const map = new Map()
-  let left=0;
-  let long = 0;
+  let left = 0,
+    long = 0;
+  const map = new Map();
 
-  for (let right = 0; right < str.length; right++) {
-   
+  for (let right = 0; right < s.length; right++) {
+    while (map.has(s[right])) {
+     
+      map.delete(s[left])
+      left++;
+    } 
+    
+    map.set(s[right], right);
+    long = Math.max(long, right-left+1);
   }
-
   return long;
 }
-console.log(longestSubStringWithoutRepeatChar("abcabcbb"));
+console.log(longestSubStringWithoutRepeatChar(" "));
+
+// {
+//  a:0
+// }
+
