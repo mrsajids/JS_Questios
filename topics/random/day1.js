@@ -52,4 +52,39 @@ var isAnagram = function (s, t) {
     return map;
   }
 };
-console.log(isAnagram("aabb", "abab"));
+// console.log(isAnagram("aabb", "abab"));
+/*
+Example 1:
+
+Input: s = "abcd", t = "abcde"
+Output: "e"
+Explanation: 'e' is the letter that was added.
+Example 2:
+
+Input: s = "", t = "y"
+Output: "y" 
+*/
+var findTheDifference = function (s, t) {
+  let map = new Map();
+
+  for (let i = 0; i < s.length; i++) {
+    map.set(s[i], (map.get(s[i]) || 0) + 1);
+  }
+
+  for (let i = 0; i < t.length; i++) {
+    if (map.has(t[i])) {
+      map.set(t[i], map.get(t[i]) - 1);
+      if (map.get(t[i]) === 0) map.delete(t[i]);
+    } else {
+      // This is the extra char
+      return t[i];
+    }
+  }
+
+  // Whatever remains in the map is the extra char
+  for (let [char] of map) {
+    return char;
+  }
+};
+
+console.log(findTheDifference("abcd", "abcdef"));
