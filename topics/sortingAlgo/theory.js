@@ -77,4 +77,16 @@ Time (avg): O(n)
 Worst: O(n²)
 Use when: Input is uniformly distributed (like floating numbers in [0,1)).
 
+| Algorithm      | Best       | Avg        | Worst      | Space    | Stable | Notes                   |
+| -------------- | ---------- | ---------- | ---------- | -------- | ------ | ----------------------- |
+| Bubble Sort    | O(n)       | O(n²)      | O(n²)      | O(1)     | Yes    | Simple, slow            |
+| Selection Sort | O(n²)      | O(n²)      | O(n²)      | O(1)     | No     | Min swaps               |
+| Insertion Sort | O(n)       | O(n²)      | O(n²)      | O(1)     | Yes    | Great for nearly sorted |
+| Merge Sort     | O(n log n) | O(n log n) | O(n log n) | O(n)     | Yes    | Divide & conquer        |
+| Quick Sort     | O(n log n) | O(n log n) | O(n²)      | O(log n) | No     | Fastest in practice     |
+| Heap Sort      | O(n log n) | O(n log n) | O(n log n) | O(1)     | No     | Uses heaps              |
+| Counting Sort  | O(n+k)     | O(n+k)     | O(n+k)     | O(k)     | Yes    | Small integer range     |
+| Radix Sort     | —          | O(d(n+k))  | —          | O(n+k)   | Yes    | Sorts digits            |
+| Bucket Sort    | O(n)       | O(n)       | O(n²)      | —        | Yes    | Uniform distribution    |
+
 */
