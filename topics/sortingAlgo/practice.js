@@ -15,17 +15,31 @@ function bubbleSort(arr) {
 
 // selection sort
 // SORT ARRAY IN ASCENDING ORDER
-function selectionSort(arr) {
-  for (let i = 0; i < arr.length-1; i++) {
-    let small = i;
-    for (let j = i+1; j < arr.length; j++) {
-      if (arr[j] < arr[small]) {
-        small = j;
-      }
-    }
-    [arr[i], arr[small]] = [arr[small], arr[i]];
-  }
-  return arr;
-}
+// function selectionSort(arr) {
+//   for (let i = 0; i < arr.length-1; i++) {
+//     let small = i;
+//     for (let j = i+1; j < arr.length; j++) {
+//       if (arr[j] < arr[small]) {
+//         small = j;
+//       }
+//     }
+//     [arr[i], arr[small]] = [arr[small], arr[i]];
+//   }
+//   return arr;
+// }
 
-console.log(selectionSort([12, 18, 13, 11, 15, 20]));
+// console.log(selectionSort([12, 18, 13, 11, 15, 20]));
+
+// function insertionSort(arr) {
+//   for (let i = 1; i < arr.length; i++) {
+//     for (let j = i-1; j >=0; j--) {
+//       if (arr[j+1] < arr[j]) {
+//         [arr[j+1], arr[j]] = [arr[j], arr[j+1]];
+//       }
+//     }
+   
+//   }
+//   return arr;
+// }
+
+// console.log(insertionSort([12, 18, 13, 11, 15, 20]));
