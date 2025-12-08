@@ -43,3 +43,63 @@ function bubbleSort(arr) {
 // }
 
 // console.log(insertionSort([12, 18, 13, 11, 15, 20]));
+
+/*
+Merge sort is a classic, efficient, comparison-based divide-and-conquer sorting algorithm. 
+Original:      [38, 27, 43, 3]
+
+Divide:        [38, 27]          [43, 3]
+               /      \          /      \
+             [38]    [27]      [43]     [3]
+
+Merge:         [27, 38]         [3, 43]
+
+Final Merge:   [3, 27, 38, 43]
+*/
+
+let arr = [12, 18, 13, 11, 15, 20];
+
+function mergeSort(arr) {
+  // base condition (recursion)
+  if (arr.length <= 1) {
+    return arr;
+  }
+
+  let mid = Math.floor(arr.length / 2);
+
+  let leftPart = mergeSort(arr.slice(0, mid));
+  let rightPart = mergeSort(arr.slice(mid));
+  return merge(leftPart, rightPart);
+}
+
+function merge(left, right) {
+  // create temparary array
+  let temp = [];
+  let i = 0,
+    j = 0;
+
+  while (i < left.length && j < right.length) {
+    if (left[i] < right[j]) {
+      temp.push(left[i]);
+      i++;
+    } else {
+      temp.push(right[j]);
+      j++;
+    }
+  }
+
+  // store left remaining
+  while (i < left.length) {
+    temp.push(left[i]);
+    i++;
+  }
+
+  // store right remaining
+  while (j < right.length) {
+    temp.push(right[j]);
+    j++;
+  }
+
+  return temp;
+}
+console.log(mergeSort(arr));
