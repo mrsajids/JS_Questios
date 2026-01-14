@@ -2,7 +2,7 @@
 | ----- | ------------------------ | ------------------------------------- | ------------------------ |
 | **1** | Arrays & Strings         | Two pointers, Hashmap                 | 10–15 easy problems      |
 | **2** | Arrays (Advanced)        | Sliding window, Prefix sum            | Medium questions         |
-| **3** | Sorting + Searching      | Binary search patterns                | Learn optimization logic |
+| **3** | Sorting + Searching      | Binary search pattern  s                | Learn optimization logic |
 | **4** | Stack + Queue            | Valid parentheses, Sliding window max | 5–6 stack/queue problems |
 | **5** | Recursion + Backtracking | Subsets, permutations                 | Think recursively        |
 | **6** | Linked List + Hashing    | Reverse, detect cycle                 | 5–6 LL problems          |
